@@ -1,8 +1,7 @@
 import React from 'react'
-import Search from './Search'
-import CustomerStatus from './CustomerStatus'
-import AllCustomer from './AllCustomer'
-import Table from './Table'
+import Search from '../components/Search'
+import CustomerStatus from '../components/CustomerStatus'
+import AllCustomer from '../components/AllCustomer'
 
 const Customer = () => {
   return (
