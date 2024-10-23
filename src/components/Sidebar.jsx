@@ -6,29 +6,24 @@ import { MdArrowCircleRight, MdKeyboardArrowRight } from "react-icons/md";
 const Sidebar = ({ isVisible, toggleSidebar }) => {
   const [isCollapsed, setIsCollapsed] = useState(true);
 
-  // Handle both large screen and small/medium screen behavior
   const sidebarWidth = isVisible || !isCollapsed ? "w-64" : "w-11";
 
-  // Function to handle collapse/expand behavior
   const handleCollapse = () => {
-    // If on small/medium screen, toggle the visibility completely
     if (window.innerWidth < 1023) {
-      toggleSidebar(); // Close the sidebar
+      toggleSidebar();
     } else {
-      setIsCollapsed(!isCollapsed); // Just collapse on larger screens
+      setIsCollapsed(!isCollapsed);
     }
   };
 
   const handleLinkClick = () => {
     if (window.innerWidth < 1023) {
-      toggleSidebar(); // Close sidebar on link click in small/medium screens
+      toggleSidebar();
     }
   };
 
   return (
-    <>
-      {/* Overlay for small and medium devices */}
-      <div
+    <> <div
         className={`fixed inset-0 bg-black bg-opacity-50 z-10 lg:hidden ${
           isVisible ? "block" : "hidden"
         }`}
@@ -40,15 +35,15 @@ const Sidebar = ({ isVisible, toggleSidebar }) => {
           isVisible ? "left-0" : "-left-full"
         } lg:left-0`}
       >
-        {/* Right arrow should be visible and functional on all screen sizes */}
+       
         <div>
           <MdArrowCircleRight
-            className="w-11 h-11 absolute right-0 top-1/2 transform -translate-y-1/2 cursor-pointer"
-            onClick={handleCollapse} // Toggle collapse on click
+            className="w-11 h-11 absolute right-0  top-1/2 transform -translate-y-1/2 cursor-pointer"
+            onClick={handleCollapse} 
           />
         </div>
 
-        <div className="flex gap-3 mb-8 p-4">
+        <div className="flex gap-3 mb-8">
           <img src="dashboard.svg" alt="dashboard" />
           <span className="font-semibold text-[26px]">Dashboard</span>
         </div>
@@ -144,7 +139,7 @@ const Sidebar = ({ isVisible, toggleSidebar }) => {
             </div>
           </div>
 
-          <div className="flex justify-between items-center h-[12vh] p-4">
+          <div className="flex justify-between items-center h-[12vh] ">
             <div className="flex gap-2">
               <img src="person1.svg" alt="person" />
               <div>
