@@ -6,13 +6,16 @@ import Table from "./Table";
 const AllCustomer = () => {
   return (
     <div className="bg-white w-full mx-auto p-6 rounded-3xl">
-      <div className="flex justify-between">
+      <div className="lg:flex lg:justify-between lg:flex-row flex flex-col items-center">
         <div>
-          <p className="text-[22px] font-semibold">All Customers</p>
-          <p className="text-sm text-[#16C098]">Active Members</p>
+          <p className="lg:text-[22px] font-semibold">All Customers</p>
+          <p className="text-sm text-[#16C098] ">Active Members</p>
         </div>
-        <div className="flex items-center sm-custom:flex-col">
-          <Search />
+        <div className="flex items-center sm-custom:flex-col  xxs-custom:flex-col">
+          <div className="">
+            <Search />
+          </div>
+
           <CustomerSort />
         </div>
       </div>

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import { LuUserSquare2 } from "react-icons/lu";
 import { MdArrowCircleRight, MdKeyboardArrowRight } from "react-icons/md";
+import { NavLink } from "react-router-dom";
 
 const Sidebar = ({ isVisible, toggleSidebar }) => {
   const [isCollapsed, setIsCollapsed] = useState(true);
@@ -23,27 +24,27 @@ const Sidebar = ({ isVisible, toggleSidebar }) => {
   };
 
   return (
-    <> <div
+    <>
+      {" "}
+      <div
         className={`fixed inset-0 bg-black bg-opacity-50 z-10 lg:hidden ${
           isVisible ? "block" : "hidden"
         }`}
         onClick={toggleSidebar}
       ></div>
-
       <div
-        className={`fixed lg:relative bg-white h-full overflow-hidden z-20 lg:z-0 transition-all duration-300 ${sidebarWidth} ${
+        className={`fixed  lg:sticky bg-white lg:h-screen top-0 h-full  overflow-hidden z-20 lg:z-0 transition-all duration-300 ${sidebarWidth} ${
           isVisible ? "left-0" : "-left-full"
         } lg:left-0`}
       >
-       
         <div>
           <MdArrowCircleRight
-            className="w-11 h-11 absolute right-0  top-1/2 transform -translate-y-1/2 cursor-pointer"
-            onClick={handleCollapse} 
+            className="w-11 h-11 absolute right-0  bottom-1/4 lg:top-[800px]  cursor-pointer"
+            onClick={handleCollapse}
           />
         </div>
 
-        <div className="flex gap-3 mb-8">
+        <div className="flex gap-3 my-8 ml-[-3px] ">
           <img src="dashboard.svg" alt="dashboard" />
           <span className="font-semibold text-[26px]">Dashboard</span>
         </div>
@@ -61,50 +62,58 @@ const Sidebar = ({ isVisible, toggleSidebar }) => {
               />
               <span>Dashboard</span>
             </div>
-            <div
-              className="flex gap-3 justify-between items-center"
-              onClick={handleLinkClick}
-            >
-              <div className="flex gap-7 items-center">
-                <img
-                  src="square.png"
-                  alt="dashboard"
-                  className="w-[24px] h-[24px]"
-                />
-                <span>Product</span>
+            <NavLink to={"/product"}>
+              <div
+                className="flex gap-3 justify-between items-center "
+                onClick={handleLinkClick}
+              >
+                <div className="flex gap-7 items-center ">
+                  <img
+                    src="square.png"
+                    alt="dashboard"
+                    className="w-[24px] h-[24px]"
+                  />
+                  <span>Product</span>
+                </div>
+                <div>
+                  <MdKeyboardArrowRight className="h-16 w-6" />
+                </div>
               </div>
-              <div>
-                <MdKeyboardArrowRight className="h-16 w-6" />
+            </NavLink>
+
+            <NavLink to={"/"}>
+              <div
+                className="flex gap-3 justify-between items-center"
+                onClick={handleLinkClick}
+              >
+                <div className="flex gap-7 items-center">
+                  <LuUserSquare2 className="w-[24px] h-[24px]" />
+                  <span>Customers</span>
+                </div>
+                <div>
+                  <MdKeyboardArrowRight className="h-16 w-6" />
+                </div>
               </div>
-            </div>
-            <div
-              className="flex gap-3 justify-between items-center"
-              onClick={handleLinkClick}
-            >
-              <div className="flex gap-7 items-center">
-                <LuUserSquare2 className="w-[24px] h-[24px]" />
-                <span>Customers</span>
+            </NavLink>
+
+          
+              <div
+                className="flex gap-3 justify-between items-center"
+                onClick={handleLinkClick}
+              >
+                <div className="flex gap-7 items-center">
+                  <img
+                    src="money.png"
+                    alt="dashboard"
+                    className="w-[24px] h-[24px]"
+                  />
+                  <span>Income</span>
+                </div>
+                <div>
+                  <MdKeyboardArrowRight className="h-16 w-6" />
+                </div>
               </div>
-              <div>
-                <MdKeyboardArrowRight className="h-16 w-6" />
-              </div>
-            </div>
-            <div
-              className="flex gap-3 justify-between items-center"
-              onClick={handleLinkClick}
-            >
-              <div className="flex gap-7 items-center">
-                <img
-                  src="money.png"
-                  alt="dashboard"
-                  className="w-[24px] h-[24px]"
-                />
-                <span>Income</span>
-              </div>
-              <div>
-                <MdKeyboardArrowRight className="h-16 w-6" />
-              </div>
-            </div>
+            
             <div
               className="flex gap-3 justify-between items-center"
               onClick={handleLinkClick}

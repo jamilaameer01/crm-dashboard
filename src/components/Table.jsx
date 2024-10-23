@@ -67,6 +67,142 @@ const Table = () => {
       Country: "United States",
       Status: "Active",
     },
+    {
+      CustomerName: "Jane Cooper",
+      Company: "Microsoft",
+      PhoneNumber: "(225) 555-0118",
+      Email: "jane@microsoft.com",
+      Country: "United States",
+      Status: "Active",
+    },
+    {
+      CustomerName: "Jane Cooper",
+      Company: "Microsoft",
+      PhoneNumber: "(225) 555-0118",
+      Email: "jane@microsoft.com",
+      Country: "United States",
+      Status: "Active",
+    },
+    {
+      CustomerName: "Jane Cooper",
+      Company: "Microsoft",
+      PhoneNumber: "(225) 555-0118",
+      Email: "jane@microsoft.com",
+      Country: "United States",
+      Status: "Active",
+    },
+    {
+      CustomerName: "Jane Cooper",
+      Company: "Microsoft",
+      PhoneNumber: "(225) 555-0118",
+      Email: "jane@microsoft.com",
+      Country: "United States",
+      Status: "Active",
+    },
+    {
+      CustomerName: "Jane Cooper",
+      Company: "Microsoft",
+      PhoneNumber: "(225) 555-0118",
+      Email: "jane@microsoft.com",
+      Country: "United States",
+      Status: "Active",
+    },
+    {
+      CustomerName: "Jane Cooper",
+      Company: "Microsoft",
+      PhoneNumber: "(225) 555-0118",
+      Email: "jane@microsoft.com",
+      Country: "United States",
+      Status: "Active",
+    },
+    {
+      CustomerName: "Jane Cooper",
+      Company: "Microsoft",
+      PhoneNumber: "(225) 555-0118",
+      Email: "jane@microsoft.com",
+      Country: "United States",
+      Status: "Active",
+    },
+    {
+      CustomerName: "Jane Cooper",
+      Company: "Microsoft",
+      PhoneNumber: "(225) 555-0118",
+      Email: "jane@microsoft.com",
+      Country: "United States",
+      Status: "Active",
+    },
+    {
+      CustomerName: "Jane Cooper",
+      Company: "Microsoft",
+      PhoneNumber: "(225) 555-0118",
+      Email: "jane@microsoft.com",
+      Country: "United States",
+      Status: "Active",
+    },
+    {
+      CustomerName: "Jane Cooper",
+      Company: "Microsoft",
+      PhoneNumber: "(225) 555-0118",
+      Email: "jane@microsoft.com",
+      Country: "United States",
+      Status: "Active",
+    },
+    {
+      CustomerName: "Jane Cooper",
+      Company: "Microsoft",
+      PhoneNumber: "(225) 555-0118",
+      Email: "jane@microsoft.com",
+      Country: "United States",
+      Status: "Active",
+    },
+    {
+      CustomerName: "Jane Cooper",
+      Company: "Microsoft",
+      PhoneNumber: "(225) 555-0118",
+      Email: "jane@microsoft.com",
+      Country: "United States",
+      Status: "Active",
+    },
+    {
+      CustomerName: "Jane Cooper",
+      Company: "Microsoft",
+      PhoneNumber: "(225) 555-0118",
+      Email: "jane@microsoft.com",
+      Country: "United States",
+      Status: "Active",
+    },
+    {
+      CustomerName: "Jane Cooper",
+      Company: "Microsoft",
+      PhoneNumber: "(225) 555-0118",
+      Email: "jane@microsoft.com",
+      Country: "United States",
+      Status: "Active",
+    },
+    {
+      CustomerName: "Jane Cooper",
+      Company: "Microsoft",
+      PhoneNumber: "(225) 555-0118",
+      Email: "jane@microsoft.com",
+      Country: "United States",
+      Status: "Active",
+    },
+    {
+      CustomerName: "Jane Cooper",
+      Company: "Microsoft",
+      PhoneNumber: "(225) 555-0118",
+      Email: "jane@microsoft.com",
+      Country: "United States",
+      Status: "Active",
+    },
+    {
+      CustomerName: "Jamila",
+      Company: "Microsoft",
+      PhoneNumber: "(225) 555-0118",
+      Email: "jane@microsoft.com",
+      Country: "United States",
+      Status: "Active",
+    },
   
   ];
 
@@ -114,26 +250,28 @@ const Table = () => {
         {data.map((user) => (
           <div
             key={user.id}
-            className="bg-white shadow-md rounded-lg p-5 mb-5 gap-y-5  grid grid-cols-2 "
+            className="bg-white shadow-md rounded-lg p-5 mb-5 gap-y-5  "
           >
-            <div>
-              <span className="font-semibold">Customer Name:</span>{" "}
-              {user.CustomerName}
+            <div className="flex flex-wrap text-sm gap-y-4  gap-x-32 pt-4">
+              <div className=" lg:text-[16px]">
+                <span className="font-semibold ">Customer Name:</span>{" "}
+                {user.CustomerName}
+              </div>
+              <div className="">
+                <span className="font-semibold ">Company:</span> {user.Company}
+              </div>
+              <div>
+                <span className="font-semibold">Phone Number:</span>{" "}
+                {user.PhoneNumber}
+              </div>
+              <div className="">
+                <span className="font-semibold ">Email:</span> {user.Email}
+              </div>
+              <div>
+                <span className="font-semibold">Country:</span> {user.Country}
+              </div>
             </div>
-            <div className="">
-              <span className="font-semibold ">Company:</span> {user.Company}
-            </div>
-            <div>
-              <span className="font-semibold">Phone Number:</span>{" "}
-              {user.PhoneNumber}
-            </div>
-            <div className="">
-              <span className="font-semibold ">Email:</span> {user.Email}
-            </div>
-            <div>
-              <span className="font-semibold">Country:</span> {user.Country}
-            </div>
-            <div className="text-center">
+            <div className="text-center mt-5 lg:text-[16px] text-sm ">
               <button
                 className={`w-20 px-2 rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300 ${
                   user.Status === "Active"
