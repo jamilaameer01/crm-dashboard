@@ -1,5 +1,3 @@
-// src/components/Layout.js
-
 import React, { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import Sidebar from "./Sidebar"; // Import your Sidebar component
@@ -9,21 +7,23 @@ const Layout = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   const toggleSidebar = () => {
-      setIsVisible(!isVisible);
-     
+    setIsVisible(!isVisible);
   };
 
   return (
     <div className="flex">
       <div className="lg:block">
+        {/* Pass isVisible and toggleSidebar as props */}
         <Sidebar isVisible={isVisible} toggleSidebar={toggleSidebar} />
       </div>
 
       <main className="bg-[#D9D9D9] px-8 flex-1">
-        <div className="lg:hidden pl-12">
+        {/* Hamburger icon only visible on small and medium screens */}
+        <div className="lg:hidden p-4">
           <GiHamburgerMenu onClick={toggleSidebar} className="cursor-pointer" />
         </div>
-        <Outlet /> 
+
+        <Outlet />
       </main>
     </div>
   );
